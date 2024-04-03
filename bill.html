@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Bill</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        .header img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header img.left {
+            left: 10px;
+        }
+
+        .header img.right {
+            right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .total span {
+            font-weight: bold;
+        }
+        .invoice-details {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            gap: 210px;
+            border: 1px solid black;
+        }
+
+        .invoice-details div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="left_image_url.jpg" alt="Left Image" class="left">
+            <h1>Payment Bill</h1>
+            <img src="right_image_url.jpg" alt="Right Image" class="right">
+        </div>
+        <div class="invoice-details">
+            <div><strong>Tax Invoice Number:</strong> INV12345</div>
+            <div><strong>Bill Number:</strong> BILL67890</div>
+            <div><strong>Date:</strong> April 3, 2024</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bill-info">
+                    <h2>Bill Maker Information</h2>
+                    <div><strong>Name:</strong> John Doe</div>
+                    <div><strong>Email:</strong> john@example.com</div>
+                    <div><strong>Phone:</strong> +1234567890</div>
+                    <div><strong>Address:</strong> 123 Main Street, City, Country</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bill-info">
+                    <h2>Customer Information</h2>
+                    <div><strong>Name:</strong> Jane Smith</div>
+                    <div><strong>Email:</strong> jane@example.com</div>
+                    <div><strong>Phone:</strong> +1987654321</div>
+                    <div><strong>Address:</strong> 456 Elm Street, Town, Country</div>
+                </div>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Product Description</th>
+                    <th>HSN Code</th>
+                    <th>Type</th>
+                    <th>Qty</th>
+                    <th>Gross Weight</th>
+                    <th>Stone Weight</th>
+                    <th>Net Weight</th>
+                    <th>Price</th>
+                    <th>CGST (1.50%)</th>
+                    <th>SGST (1.50%)</th>
+                    <th>Product Value (Rs)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add your product details here -->
+                <tr>
+                    <td>1</td>
+                    <td>Product A</td>
+                    <td>123456</td>
+                    <td>Gold</td>
+                    <td>5</td>
+                    <td>10.5 kg</td>
+                    <td>2.5 kg</td>
+                    <td>8 kg</td>
+                    <td>$50.00</td>
+                    <td>$0.75</td>
+                    <td>$0.75</td>
+                    <td>$55.00</td>
+                </tr>
+              
+                <!-- Add more product rows as needed -->
+            </tbody>
+        </table>
+        <div class="total">
+            <span>Total:</span> $100.00 <!-- Adjust the total value as per your calculations -->
+        </div>
+    </div>
+
+</body>
+
+</html>
