@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Bill</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Addresses</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -34,19 +35,28 @@
             color: #333;
         }
 
+        /* CSS to adjust image overlay */
+
         .header img {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            z-index: 1;
+            /* Add this to ensure images are above other content */
         }
 
         .header img.left {
             left: 10px;
+            z-index: 1;
+            /* Add this to ensure images are above other content */
         }
 
         .header img.right {
             right: 10px;
+            z-index: 1;
+            /* Add this to ensure images are above other content */
         }
+
 
         table {
             width: 100%;
@@ -72,6 +82,7 @@
         .total span {
             font-weight: bold;
         }
+
         .invoice-details {
             display: flex;
             flex-direction: row;
@@ -83,6 +94,24 @@
         .invoice-details div {
             margin-bottom: 10px;
         }
+
+        .heading-after-bill-info {
+            border: 2px solid black;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        /* Media query for print */
+        @media print {
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col-sm-6 {
+                width: 50%;
+            }
+        }
     </style>
 </head>
 
@@ -90,9 +119,9 @@
 
     <div class="container">
         <div class="header">
-            <img src="left_image_url.jpg" alt="Left Image" class="left">
+            <img src="NARBARIY.png" alt="Left Image" class="left" width="80px">
             <h1>Payment Bill</h1>
-            <img src="right_image_url.jpg" alt="Right Image" class="right">
+            <img src="hallmark.jpeg" alt="Right Image" class="right" width="80px">
         </div>
         <div class="invoice-details">
             <div><strong>Tax Invoice Number:</strong> INV12345</div>
@@ -100,7 +129,7 @@
             <div><strong>Date:</strong> April 3, 2024</div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <div class="bill-info">
                     <h2>Bill Maker Information</h2>
                     <div><strong>Name:</strong> John Doe</div>
@@ -109,7 +138,7 @@
                     <div><strong>Address:</strong> 123 Main Street, City, Country</div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <div class="bill-info">
                     <h2>Customer Information</h2>
                     <div><strong>Name:</strong> Jane Smith</div>
@@ -118,6 +147,9 @@
                     <div><strong>Address:</strong> 456 Elm Street, Town, Country</div>
                 </div>
             </div>
+        </div>
+        <div class="heading-after-bill-info" style="text-align: center;">
+            <h2>सोना चांदी के विश्वसनीय एवं नवीनतम आभूषणों का एकमात्र प्रतिष्ठान</h2>
         </div>
         <table>
             <thead>
@@ -152,15 +184,86 @@
                     <td>$0.75</td>
                     <td>$55.00</td>
                 </tr>
-              
+
                 <!-- Add more product rows as needed -->
             </tbody>
         </table>
-        <div class="total">
-            <span>Total:</span> $100.00 <!-- Adjust the total value as per your calculations -->
+        <table class="total" style="border: 2px solid black;">
+            <tbody>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="3">3054</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+<div class="bank-address" style="margin-top: 20px;">
+        <div class="col-md-6" style="border: 2px solid black;">
+            <!-- Bank addresses in Section 1 -->
+            <div style="margin: 10px;">
+                <p>Bank Details : HDFC Bank</p>
+                <p>Branch : Vijay Nagar, Jabalpur</p>
+                <p>Nidhi: NARVARIA ABHUSHAN</p>
+                <p>A/C: 502000088307803 | IFSC Code : HDFC0001282 </p>
+                <!-- Add more bank addresses as needed -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Section 2</h2>
+            <!-- Content for Section 2 (if any) -->
+
         </div>
     </div>
+</div>
 
+    <!-- 
+    <script>
+        // JavaScript code to calculate totals
+        document.addEventListener("DOMContentLoaded", function() {
+            var quantityTotal = 0;
+            var priceTotal = 0;
+            var cgstTotal = 0;
+            var sgstTotal = 0;
+            var productValueTotal = 0;
+
+            var table = document.querySelector("table tbody");
+            var rows = table.querySelectorAll("tr");
+
+            rows.forEach(function(row) {
+                var cells = row.querySelectorAll("td");
+
+                var quantity = parseFloat(cells[4].innerText);
+                var price = parseFloat(cells[8].innerText.replace("$", ""));
+                var cgst = parseFloat(cells[9].innerText.replace("$", ""));
+                var sgst = parseFloat(cells[10].innerText.replace("$", ""));
+                var productValue = parseFloat(cells[11].innerText.replace("$", ""));
+
+                quantityTotal += quantity;
+                priceTotal += price;
+                cgstTotal += cgst;
+                sgstTotal += sgst;
+                productValueTotal += productValue;
+            });
+
+            // Display totals
+            var totalRow = document.querySelector(".total tbody tr");
+            totalRow.querySelector("td:nth-child(5)").innerText = quantityTotal.toFixed(2);
+            totalRow.querySelector("td:nth-child(7)").innerText = priceTotal.toFixed(2);
+            totalRow.querySelector("td:nth-child(9)").innerText = cgstTotal.toFixed(2);
+            totalRow.querySelector("td:nth-child(10)").innerText = sgstTotal.toFixed(2);
+            totalRow.querySelector("td:nth-child(11)").innerText = productValueTotal.toFixed(2);
+        });
+    </script> -->
 </body>
 
 </html>
