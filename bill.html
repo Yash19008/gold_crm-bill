@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bank Addresses</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Bill</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -116,7 +115,9 @@
                 flex-wrap: wrap;
             }
 
-            .col-sm-6 {
+            .col-sm-6,
+            .col-md-6,
+            .col-lg-6 {
                 width: 50%;
             }
         }
@@ -192,30 +193,26 @@
                     <td>$0.75</td>
                     <td>$55.00</td>
                 </tr>
-
-                <!-- Add more product rows as needed -->
             </tbody>
-        </table>
-        <table class="total" style="border: 2px solid black;">
-            <tbody>
+            <tfoot>
                 <tr>
                     <td>Total</td>
                     <td></td>
                     <td></td>
-                    <td colspan="2">5</td>
+                    <td></td>
+                    <td>5</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td colspan="3">3054</td>
-                    <td></td>
+                    <td>3054</td>
                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
-            </tbody>
+            </tfoot>
         </table>
 
-        <div class="bank-address" style="margin-top: 20px;">
+        <div class="row bank-address" style="margin-top: 20px;">
             <div class="col-md-6">
                 <div style="margin: 10px; border: 2px solid black;">
                     <p>Bank Details : HDFC Bank</p>
@@ -328,13 +325,20 @@
         </div>
         <!-- footer area -->
         <div class="row">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto. Atque, aperiam dignissimos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto. Atque, aperiam dignissimos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto. Atque, aperiam dignissimos.</p>
+            <div class="col-md-12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto.
+                    Atque,
+                    aperiam dignissimos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto.
+                    Atque,
+                    aperiam dignissimos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto.
+                    Atque,
+                    aperiam dignissimos.</p>
+            </div>
         </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+
 </body>
 
 </html>
