@@ -7,7 +7,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -101,6 +101,14 @@
             padding: 10px;
         }
 
+        .product_total {
+            display: flex;
+            align-items: center;
+            gap: 281px;
+            border-bottom: 2px solid black;
+        }
+
+
         /* Media query for print */
         @media print {
             .row {
@@ -151,7 +159,7 @@
         <div class="heading-after-bill-info" style="text-align: center;">
             <h2>सोना चांदी के विश्वसनीय एवं नवीनतम आभूषणों का एकमात्र प्रतिष्ठान</h2>
         </div>
-        <table>
+        <table class="head_table">
             <thead>
                 <tr>
                     <th>S.No</th>
@@ -207,63 +215,123 @@
             </tbody>
         </table>
 
-<div class="bank-address" style="margin-top: 20px;">
-        <div class="col-md-6" style="border: 2px solid black;">
-            <!-- Bank addresses in Section 1 -->
-            <div style="margin: 10px;">
-                <p>Bank Details : HDFC Bank</p>
-                <p>Branch : Vijay Nagar, Jabalpur</p>
-                <p>Nidhi: NARVARIA ABHUSHAN</p>
-                <p>A/C: 502000088307803 | IFSC Code : HDFC0001282 </p>
-                <!-- Add more bank addresses as needed -->
+        <div class="bank-address" style="margin-top: 20px;">
+            <div class="col-md-6">
+                <div style="margin: 10px; border: 2px solid black;">
+                    <p>Bank Details : HDFC Bank</p>
+                    <p>Branch : Vijay Nagar, Jabalpur</p>
+                    <p>Nidhi: NARVARIA ABHUSHAN</p>
+                    <p>A/C: 502000088307803 | IFSC Code : HDFC0001282 </p>
+                    <!-- Add more bank addresses as needed -->
+                </div>
+                <div
+                    style="margin-left: 10px; border: 1px solid black; border-left: 2px dotted black; border-bottom: 2px dotted black;">
+                    <p>Total Amount include Hallmark Charge @ Rs 50 Per Peice</p>
+                </div>
+                <div>
+                    <ol style="gap: 7px; display: grid;">
+                        <li>First point</li>
+                        <li>Second point</li>
+                        <li>Third point</li>
+                        <li>Fourth point</li>
+                        <li>Fifth point</li>
+                        <li>Sixth point</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p style="border-bottom: 2px solid black;">Product Total value</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: center;">Price: ₹500</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h5>Additional:Other Charge</h5>
+                </div>
+                <!-- Content for Section 2 (if any) -->
+                <div class="row" style="border-left: 2px solid black;border-right: 2px solid black;">
+                    <div class="col-md-4">
+                        <p>1</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Product Total value</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Price: ₹500</p>
+                    </div>
+                </div>
+                <!-- Content for Section 3 (if any) -->
+                <div class="row" style="border: 2px solid black">
+                    <div class="col-md-6">
+                        <p>Total value</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: center;">Price: ₹500</p>
+                    </div>
+                </div>
+                <!-- Content for Section 4 (if any) -->
+                <div class="row" style="  border: none; border-left: 2px solid black; border-right: 2px solid black;">
+                    <div class="col-md-12">
+                        <p>Less: Other Discount</p>
+                    </div>
+                </div>
+                <!-- Content for Section 5 (if any) -->
+                <div class="row" style="  border: none; border-left: 2px solid black; border-right: 2px solid black;">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <p style="text-align: center;">Price: ₹500</p>
+                    </div>
+                </div>
+                <!-- Content for Section 6 (if any) -->
+                <div class="row" style="border: 2px solid black;">
+                    <div class="col-md-6">
+                        <p>Net invoice Value</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: center;">Price: ₹500</p>
+                    </div>
+                </div>
+                <!-- Content for Section 7 (if any) -->
+                <div class="row" style="  border: none; border-left: 2px solid black; border-right: 2px solid black;">
+                    <div class="col-md-12" style="display: flex; gap: 10px;">
+                        <p>Value in word:</p>
+                        <p>Three Hundred Rupee Only</p>
+                    </div>
+                </div>
+                <!-- Content for Section 7 (if any) -->
+                <div class="row"
+                    style="border-left: 2px solid black;border-right: 2px solid black;border-top: 2px solid black;">
+                    <div class="col-md-12">
+                        <p>Amount Paid:</p>
+                    </div>
+                </div>
+                <!-- Content for Section 8 (if any) -->
+                <div class="row" style="border: 2px solid black;">
+                    <div class="col-md-6">
+                        <p>Cash : </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: center;">14000</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>UPI : </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: center;">14000</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-6">
-            <h2>Section 2</h2>
-            <!-- Content for Section 2 (if any) -->
-
+        <!-- footer area -->
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto. Atque, aperiam dignissimos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto. Atque, aperiam dignissimos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus numquam non ea pariatur iusto. Atque, aperiam dignissimos.</p>
         </div>
-    </div>
-</div>
-
-    <!-- 
-    <script>
-        // JavaScript code to calculate totals
-        document.addEventListener("DOMContentLoaded", function() {
-            var quantityTotal = 0;
-            var priceTotal = 0;
-            var cgstTotal = 0;
-            var sgstTotal = 0;
-            var productValueTotal = 0;
-
-            var table = document.querySelector("table tbody");
-            var rows = table.querySelectorAll("tr");
-
-            rows.forEach(function(row) {
-                var cells = row.querySelectorAll("td");
-
-                var quantity = parseFloat(cells[4].innerText);
-                var price = parseFloat(cells[8].innerText.replace("$", ""));
-                var cgst = parseFloat(cells[9].innerText.replace("$", ""));
-                var sgst = parseFloat(cells[10].innerText.replace("$", ""));
-                var productValue = parseFloat(cells[11].innerText.replace("$", ""));
-
-                quantityTotal += quantity;
-                priceTotal += price;
-                cgstTotal += cgst;
-                sgstTotal += sgst;
-                productValueTotal += productValue;
-            });
-
-            // Display totals
-            var totalRow = document.querySelector(".total tbody tr");
-            totalRow.querySelector("td:nth-child(5)").innerText = quantityTotal.toFixed(2);
-            totalRow.querySelector("td:nth-child(7)").innerText = priceTotal.toFixed(2);
-            totalRow.querySelector("td:nth-child(9)").innerText = cgstTotal.toFixed(2);
-            totalRow.querySelector("td:nth-child(10)").innerText = sgstTotal.toFixed(2);
-            totalRow.querySelector("td:nth-child(11)").innerText = productValueTotal.toFixed(2);
-        });
-    </script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
